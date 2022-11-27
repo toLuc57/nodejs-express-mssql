@@ -1,0 +1,118 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Sample API",
+    "description": "Optional multiline or single-line description in [CommonMark](http://commonmark.org/help/) or HTML.",
+    "version": "1.0.0",
+    "contact": {
+      "email": "abc@gmail.com",
+      "name": "abc"
+    }
+  },
+  "servers": [
+    {
+      "url": "http://api.example.com/v1",
+      "description": "Optional server description, e.g. Main (production) server"
+    },
+    {
+      "url": "http://staging-api.example.com",
+      "description": "Optional server description, e.g. Internal staging server for testing"
+    }
+  ],
+  "tags": [
+    {
+      "name": "category",
+      "description": "Everything about your Categories",
+      "externalDocs": {
+        "description": "Find out more",
+        "url": "http://swagger.io"
+      }
+    }
+  ],
+  "paths": {
+    "/api/categories": {
+      "get": {
+        "tags": [
+          "category"
+        ],
+        "summary": "Returns a list of categories.",
+        "description": "Optional extended description in CommonMark or HTML.",
+        "responses": {
+          "200": {
+            "description": "A JSON array of user names",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Categories"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Categories": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "example": 4
+          },
+          "name": {
+            "type": "string",
+            "example": "Arthur Dent"
+          },
+          "parentId": {
+            "type": "integer",
+            "example": 1
+          },
+          "order": {
+            "type": "integer",
+            "example": 1
+          },
+          "metakey": {
+            "type": "string",
+            "example": "Metakey"
+          },
+          "metadesc": {
+            "type": "string",
+            "example": "Metadesc"
+          },
+          "createBy": {
+            "type": "integer",
+            "example": 1
+          },
+          "createAt": {
+            "type": "string",
+            "example": "2022-10-27T13:58:43.890Z"
+          },
+          "updateBy": {
+            "type": "integer",
+            "example": 1
+          },
+          "udpateAt": {
+            "type": "string",
+            "example": "2022-10-27T13:58:43.890Z"
+          },
+          "status": {
+            "type": "integer",
+            "example": 1
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "metakey",
+          "metadesc",
+          "status"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "express-mssql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js",
+    "dev": "nodemon ./index.js localhost 8000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "fs-extra": "^10.1.0",
+    "mssql": "^9.0.1",
+    "random-id": "^1.0.4",
+    "swagger-express-mw": "^0.7.0",
+    "swagger-jsdoc": "^6.2.5",
+    "swagger-tools": "^0.10.1",
+    "swagger-ui-express": "^4.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
