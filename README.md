@@ -8,7 +8,7 @@ Không có mục đích nào khác ngoài việc học tập
 Chạy project
 ---
 
-	git https://github.com/toLuc57/nodejs-express-mssql.git
+	git clone https://github.com/toLuc57/nodejs-express-mssql.git
 
 Sau đó
 	
